@@ -1,10 +1,13 @@
 :root {
-    --forest: #31593d;
-    --forest-deep: #213d2c;
-    --leaf: #6e8a58;
-    --bark: #57412e;
-    --cream: #f7f6ed;
-    --ink: #384237;
+    --forest: #35563f;
+    --forest-deep: #17271e;
+    --leaf: #b4ca92;
+    --bark: #c59a70;
+    --cream: #1e2b23;
+    --surface: #2a3930;
+    --ink: #eee9dc;
+    --bs-body-bg: var(--cream);
+    --bs-body-color: var(--ink);
     --bs-body-font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
@@ -18,11 +21,11 @@ body {
     min-height: 78px;
     padding-inline: clamp(1rem, 4vw, 4rem);
     border-bottom: 1px solid rgb(53 78 50 / 14%);
-    background-color: rgb(247 246 237 / 86%);
-    box-shadow: 0 8px 28px rgb(38 48 30 / 8%);
+    background-color: rgb(25 39 30 / 91%);
+    box-shadow: 0 8px 28px rgb(0 0 0 / 22%);
 }
 
-.brand { color: var(--bark); }
+.brand { color: var(--ink); }
 .brand-mark, .footer-brand-mark {
     display: grid;
     width: 46px;
@@ -37,26 +40,26 @@ body {
 .brand-copy strong { font-size: .85rem; letter-spacing: .13em; }
 .brand-copy span { color: var(--leaf); font-size: .75rem; letter-spacing: .08em; }
 .site-nav .navbar-nav { align-items: center; }
-.site-nav .nav-link { padding: .7rem .95rem; border-radius: 999px; color: var(--bark); }
+.site-nav .nav-link { padding: .7rem .95rem; border-radius: 999px; color: #e8e3d5; }
 .site-nav .nav-link:hover, .site-nav .nav-link:focus-visible, .site-nav .nav-link.active {
-    color: var(--forest-deep);
-    background: rgb(61 101 58 / 10%);
+    color: #f3eddf;
+    background: rgb(180 202 146 / 16%);
 }
-.nav-drawer { color: var(--ink); background: var(--cream); }
-.nav-drawer .nav-link { color: var(--bark); }
-.nav-drawer .nav-link.active { color: var(--forest); }
+.nav-drawer { color: var(--ink); background: #202f26; }
+.nav-drawer .nav-link { color: #e8e3d5; }
+.nav-drawer .nav-link.active { color: var(--leaf); }
 .site-toggler { border: 0; }
 
-.hero-section { overflow: hidden; background: linear-gradient(120deg, var(--cream), #edf0e4); }
+.hero-section { overflow: hidden; background: linear-gradient(120deg, #23382b, #352e25); }
 .eyebrow, .card-category {
     color: var(--leaf);
     font-size: .72rem;
     font-weight: 750;
     letter-spacing: .15em;
 }
-.hero-title { color: var(--forest-deep); letter-spacing: -.055em; line-height: .98; }
-.hero-title span { display: block; color: var(--bark); }
-.hero-description { max-width: 34rem; color: #5c6257; line-height: 1.75; }
+.hero-title { color: #f0eadb; letter-spacing: -.055em; line-height: .98; }
+.hero-title span { display: block; color: #d0a67b; }
+.hero-description { max-width: 34rem; color: #d1d5c9; line-height: 1.75; }
 .cta-button {
     border: 1px solid var(--forest);
     color: #fffdf5;
@@ -68,7 +71,7 @@ body {
     position: relative;
     overflow: hidden;
     aspect-ratio: 1.28;
-    border: 6px solid rgb(255 255 255 / 72%);
+    border: 6px solid rgb(199 215 182 / 30%);
     border-radius: 1.8rem;
     background: #eee9dc;
     box-shadow: 0 20px 54px rgb(43 58 36 / 16%);
@@ -93,40 +96,42 @@ body {
 }
 .caption-dot { width: .5rem; height: .5rem; flex: 0 0 auto; border-radius: 50%; background: #bdd49a; }
 
-.discover-section { background: #fffefa; }
+.discover-section { background: #1b2921; }
 .section-heading { max-width: 44rem; }
-.section-heading h2 { color: var(--bark); font-size: clamp(1.8rem, 3.5vw, 2.5rem); letter-spacing: -.035em; }
-.section-heading > p:last-child { color: #6a6f64; line-height: 1.7; }
+.section-heading h2 { color: #ead8be; font-size: clamp(1.8rem, 3.5vw, 2.5rem); letter-spacing: -.035em; }
+.section-heading > p:last-child { color: #c7cdbf; line-height: 1.7; }
 .story-card {
     overflow: hidden;
-    border: 1px solid rgb(92 105 73 / 12%);
+    border: 1px solid rgb(190 207 171 / 16%);
     border-radius: 1.25rem;
-    box-shadow: 0 10px 28px rgb(51 60 41 / 7%);
+    color: var(--ink);
+    background: var(--surface);
+    box-shadow: 0 10px 28px rgb(0 0 0 / 18%);
 }
 .story-card .card-img-top { aspect-ratio: 1.65; object-fit: cover; }
 .card-category { margin-bottom: .55rem; font-size: .68rem; }
-.story-card .card-title { color: var(--bark); font-size: 1.25rem; letter-spacing: -.025em; }
-.story-card .card-text { color: #62675d; line-height: 1.65; }
-.card-link { color: var(--forest); font-weight: 700; text-decoration: none; }
-.card-link:hover { color: var(--forest-deep); }
+.story-card .card-title { color: #e9d3b6; font-size: 1.25rem; letter-spacing: -.025em; }
+.story-card .card-text { color: #d0d4c9; line-height: 1.65; }
+.card-link { color: #bfd69e; font-weight: 700; text-decoration: none; }
+.card-link:hover { color: #e3efcf; }
 
-.site-footer { border-top: 1px solid rgb(79 92 62 / 14%); color: var(--bark); background: #f4f1e7; }
-.footer-brand { color: var(--bark); font-weight: 650; text-decoration: none; }
-.footer-brand strong { color: var(--forest); }
+.site-footer { border-top: 1px solid rgb(190 207 171 / 14%); color: #e8e0d2; background: #17231c; }
+.footer-brand { color: #e8e0d2; font-weight: 650; text-decoration: none; }
+.footer-brand strong { color: var(--leaf); }
 .footer-brand-mark { width: 40px; height: 40px; border-radius: 13px; }
 .footer-brand-mark img { width: 31px; height: 31px; object-fit: contain; }
-.footer-nav a { color: #6a6354; font-size: .85rem; text-decoration: none; }
-.footer-nav a:hover { color: var(--forest); }
-.social-label { margin-bottom: .5rem; color: #827764; font-size: .7rem; font-weight: 650; letter-spacing: .08em; text-transform: uppercase; }
+.footer-nav a { color: #cbc7b9; font-size: .85rem; text-decoration: none; }
+.footer-nav a:hover { color: var(--leaf); }
+.social-label { margin-bottom: .5rem; color: #aaa996; font-size: .7rem; font-weight: 650; letter-spacing: .08em; text-transform: uppercase; }
 .social-icon {
     display: grid;
     width: 34px;
     height: 34px;
     place-items: center;
-    border: 1px solid rgb(75 93 61 / 16%);
+    border: 1px solid rgb(190 207 171 / 20%);
     border-radius: 50%;
     color: var(--forest);
-    background: rgb(255 255 255 / 56%);
+    background: rgb(255 255 255 / 6%);
 }
 .social-icon svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.6; }
 .social-icon:nth-child(n + 2) svg path, .social-dot { fill: currentColor; stroke: none; }
