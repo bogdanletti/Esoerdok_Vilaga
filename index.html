@@ -11,7 +11,7 @@
 </head>
 <body data-bs-theme="dark">
     <header class="site-header sticky-top">
-        <nav class="navbar navbar-translucent lg:navbar-expand site-nav" aria-label="Fő navigáció" data-bs-theme="dark">
+        <nav class="navbar navbar-translucent md:navbar-expand site-nav" aria-label="Fő navigáció" data-bs-theme="dark">
             <div class="container-fluid px-3 lg:px-5">
                 <a class="navbar-brand brand d-flex align-items-center gap-3" href="index.html" aria-label="Esőerdők világa – főoldal">
                     <span class="brand-mark"><img src="img/feherLogo.png" alt=""></span>
@@ -27,7 +27,7 @@
                         <h2 class="drawer-title" id="mainNavigationLabel">Menü</h2>
                         <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Menü bezárása"></button>
                     </div>
-                    <div class="drawer-body mb-2 lg:mb-0">
+                    <div class="drawer-body mb-2 md:mb-0">
                         <ul class="nav navbar-nav mx-auto gap-1">
                             <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Főoldal</a></li>
                             <li class="nav-item"><a class="nav-link" href="elovilag.html">Élővilág</a></li>
@@ -42,29 +42,44 @@
     </header>
 
     <main>
-        <section class="hero-section py-5 lg:py-6">
-            <div class="container-xl">
-                <div class="row align-items-center g-4 lg:g-5">
-                    <div class="col-12 lg:col-5">
+        <section class="hero-section" aria-labelledby="hero-title">
+            <img class="hero-background" src="img/rainforest-hero.png" alt="" aria-hidden="true" fetchpriority="high">
+            <div class="container-xl hero-inner px-3 md:px-4">
+                <div class="row">
+                    <div class="col-12 md:col-10 lg:col-8 xl:col-7">
                         <p class="eyebrow">A FÖLD ZÖLD TÜDEJE</p>
-                        <h1 class="hero-title display-3 fw-bold">ESŐERDŐK <span>VILÁGA</span></h1>
-                        <p class="lead hero-description my-4">
-                            Ismerd meg a sűrű lombkoronák, különleges állatok és rejtett folyók lenyűgöző világát.
-                            Fedezd fel, miért olyan fontosak ezek az élőhelyek mindannyiunk számára.
+                        <h1 class="hero-title fw-bold" id="hero-title">ESŐERDŐK <span>VILÁGA</span></h1>
+                        <p class="lead hero-description">
+                            Fedezd fel a lombkoronák, különleges állatok és rejtett folyók lenyűgöző világát.
+                            Ismerd meg az élőhelyet, amelynek védelme mindannyiunk közös ügye.
                         </p>
-                        <a class="btn-solid rounded-pill px-4 py-3 cta-button" href="#felfedezes">
-                            Fedezd fel <span class="ms-2" aria-hidden="true">→</span>
-                        </a>
-                    </div>
-                    <div class="col-12 lg:col-7">
-                        <div class="hero-image-wrap">
-                            <img class="hero-image img-fluid w-100" src="img/rainforest-hero.png" alt="Napfényes esőerdő és ködbe burkolózó zöld hegyek">
-                            <div class="hero-image-caption">
-                                <span class="caption-dot" aria-hidden="true"></span>
-                                <span>Rejtett kincsek, végtelen élet</span>
-                            </div>
+                        <div class="hero-actions d-flex flex-wrap align-items-center gap-3">
+                            <a class="btn-solid rounded-pill px-4 py-3 cta-button" href="#felfedezes">
+                                Fedezd fel <span class="ms-2" aria-hidden="true">→</span>
+                            </a>
+                            <a class="hero-secondary" href="#bemutatkozas">Az esőerdőkről <span aria-hidden="true">↓</span></a>
                         </div>
                     </div>
+                </div>
+            </div>
+            <p class="hero-caption"><span class="caption-dot" aria-hidden="true"></span> Rejtett kincsek, végtelen élet</p>
+        </section>
+
+        <section class="forest-intro" id="bemutatkozas" aria-labelledby="intro-title">
+            <div class="container-xl px-3 lg:px-4">
+                <div class="row align-items-end g-4 lg:g-5">
+                    <div class="col-12 lg:col-5">
+                        <p class="eyebrow">EGYÜTT LÉLEGZÜNK A TERMÉSZETTEL</p>
+                        <h2 class="intro-title" id="intro-title">Az esőerdő egy egész világ otthona.</h2>
+                    </div>
+                    <div class="col-12 lg:col-7">
+                        <p class="intro-copy">A trópusi esőerdők a Föld legkülönlegesebb élőhelyei közé tartoznak. A lombkoronától az erdő talajáig minden réteg élettel teli, és szorosan összekapcsolódik a víz körforgásával, az éghajlattal és az ott élő közösségekkel.</p>
+                    </div>
+                </div>
+                <div class="row row-cols-1 md:row-cols-3 g-3 intro-highlights">
+                    <div class="col"><div class="intro-highlight"><span class="intro-number">01</span><span>Rendkívüli fajgazdagság</span></div></div>
+                    <div class="col"><div class="intro-highlight"><span class="intro-number">02</span><span>Az élő vízkörforgás része</span></div></div>
+                    <div class="col"><div class="intro-highlight"><span class="intro-number">03</span><span>Védelemre érdemes otthon</span></div></div>
                 </div>
             </div>
         </section>
@@ -72,9 +87,9 @@
         <section class="discover-section py-5 lg:py-6" id="felfedezes" aria-labelledby="discover-title">
             <div class="container-xl">
                 <div class="section-heading text-center mx-auto mb-5">
-                    <p class="eyebrow">LÉPJ KÖZELEBB A TERMÉSZETHEZ</p>
-                    <h2 id="discover-title">Ahol minden élet összekapcsolódik</h2>
-                    <p>Az esőerdő apró részletei egy hatalmas, közös történetet mesélnek el.</p>
+                    <p class="eyebrow">ISMERD MEG AZ ESŐERDŐT</p>
+                    <h2 id="discover-title">Találj rá a saját ösvényedre</h2>
+                    <p>Madárdal, apró élőlények és rejtett tájak várnak — induljon a felfedezés.</p>
                 </div>
 
                 <div class="row row-cols-1 md:row-cols-2 lg:row-cols-3 g-4">
@@ -118,42 +133,36 @@
         </section>
     </main>
 
-    <footer class="site-footer pt-4">
-        <div class="container-xl">
-            <div class="row align-items-center gy-4 pb-4">
-                <div class="col-12 lg:col-3">
-                    <a class="footer-brand d-flex align-items-center gap-3" href="index.html" aria-label="Esőerdők világa – főoldal">
+    <footer class="site-footer">
+        <div class="container-xl px-3 lg:px-4 py-5 lg:py-6">
+            <div class="row g-4 lg:g-5 footer-main">
+                <div class="col-12 md:col-7 lg:col-5">
+                    <a class="footer-brand d-inline-flex align-items-center gap-3" href="index.html" aria-label="Esőerdők világa – főoldal">
                         <span class="footer-brand-mark"><img src="img/feherLogo.png" alt=""></span>
-                        <span>Esőerdők <strong>világa</strong></span>
+                        <span class="footer-brand-copy"><strong>ESŐERDŐK</strong><span>világa</span></span>
                     </a>
+                    <p class="footer-copy">Ismerd meg a trópusi erdők élővilágát, tájait és azt, hogyan vigyázhatunk erre a közös kincsre.</p>
+                    <a class="footer-cta" href="#bemutatkozas">Olvass az esőerdőkről <span aria-hidden="true">→</span></a>
                 </div>
 
-                <nav class="col-12 lg:col-6 footer-nav d-flex flex-wrap justify-content-center gap-3 lg:gap-4" aria-label="Lábléc navigáció">
-                    <a href="index.html">Főoldal</a>
+                <nav class="col-6 md:col-5 lg:col-3 footer-links" aria-label="Lábléc navigáció">
+                    <h2 class="footer-heading">Fedezd fel</h2>
                     <a href="elovilag.html">Élővilág</a>
-                    <a href="tippek.html">Tippek</a>
+                    <a href="tippek.html">Tippek és érdekességek</a>
                     <a href="terkep.html">Térkép</a>
+                    <a href="kviz.html">Kvíz</a>
                 </nav>
 
-                <div class="col-12 lg:col-3 text-center lg:text-end">
-                    <p class="social-label">Kövess minket</p>
-                    <div class="social-icons d-flex justify-content-center lg:justify-content-end gap-2" aria-hidden="true">
-                        <span class="social-icon">
-                            <svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="social-dot" cx="17.5" cy="6.8" r="1"/></svg>
-                        </span>
-                        <span class="social-icon">
-                            <svg viewBox="0 0 24 24"><path d="M13.5 20v-7h2.4l.4-2.8h-2.8V8.4c0-.8.3-1.4 1.4-1.4h1.5V4.5c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v1.8H7.7V13h2.5v7z"/></svg>
-                        </span>
-                        <span class="social-icon">
-                            <svg viewBox="0 0 24 24"><path d="M20.5 7.1c-.6.3-1.2.4-1.8.5.7-.4 1.1-1 1.4-1.7-.6.4-1.3.6-2 .8a3.2 3.2 0 0 0-5.5 2.9 9.1 9.1 0 0 1-6.6-3.4 3.2 3.2 0 0 0 1 4.3c-.5 0-1-.2-1.5-.4 0 1.6 1.1 2.9 2.6 3.2-.5.1-1 .2-1.5.1.4 1.3 1.6 2.2 3 2.2a6.5 6.5 0 0 1-4 1.4H4.4a9.1 9.1 0 0 0 14-7.7v-.4c.8-.5 1.5-1.1 2.1-1.8z"/></svg>
-                        </span>
-                    </div>
+                <div class="col-6 md:col-5 lg:col-4 footer-note">
+                    <p class="footer-kicker">MINDEN ÖSVÉNY SZÁMÍT</p>
+                    <h2 class="footer-heading">A kíváncsiság az odafigyeléssel kezdődik.</h2>
+                    <p>Fedezz fel, tanulj, és add tovább, miért fontosak az esőerdők.</p>
                 </div>
             </div>
 
-            <div class="footer-bottom border-top d-flex flex-column md:flex-row justify-content-between gap-2 py-3 small">
+            <div class="footer-bottom d-flex flex-column md:flex-row justify-content-between align-items-start md:align-items-center gap-3 mt-5 pt-4">
                 <span>© 2026 Esőerdők világa. Minden jog fenntartva.</span>
-                <div class="d-flex flex-wrap gap-3">
+                <div class="footer-legal d-flex flex-wrap gap-3">
                     <span>Adatvédelem</span>
                     <span>Felhasználási feltételek</span>
                 </div>
