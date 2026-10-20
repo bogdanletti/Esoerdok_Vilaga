@@ -8,40 +8,38 @@
         toggle.setAttribute("aria-expanded", String(expanded));
     };
 
+    const syncExpanded = () => setExpanded(drawer.open);
+
     const closeDrawer = () => {
         if (typeof drawer.close === "function" && drawer.open) {
             drawer.close();
         } else {
             drawer.removeAttribute("open");
-            setExpanded(false);
         }
+        syncExpanded();
     };
 
     toggle.addEventListener("click", (event) => {
         event.preventDefault();
-        event.stopPropagation();
 
         if (drawer.open) {
             closeDrawer();
         } else if (typeof drawer.showModal === "function") {
             drawer.showModal();
-            setExpanded(true);
+            syncExpanded();
         } else {
             drawer.setAttribute("open", "");
-            setExpanded(true);
+            syncExpanded();
         }
     });
 
-    drawer.addEventListener("close", () => setExpanded(false));
-    drawer.addEventListener("cancel", () => setExpanded(false));
+    drawer.addEventListener("close", syncExpanded);
+    drawer.addEventListener("cancel", () => requestAnimationFrame(syncExpanded));
     drawer.addEventListener("click", (event) => {
         if (event.target === drawer) closeDrawer();
     });
 
-    drawer.querySelectorAll("[data-bs-dismiss='drawer'], .nav-link").forEach((link) => {
-        link.addEventListener("click", (event) => {
-            if (link.matches("[data-bs-dismiss='drawer']")) event.stopPropagation();
-            closeDrawer();
-        });
+    drawer.querySelectorAll(".drawer-close, .nav-link").forEach((link) => {
+        link.addEventListener("click", closeDrawer);
     });
 })();
