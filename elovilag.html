@@ -50,21 +50,21 @@
                 <p class="eyebrow justify-content-center"><span class="pulse-dot" aria-hidden="true"></span>A lombkoronától az erdő talajáig</p>
                 <h1 id="wildlife-title">Az esőerdők <span>élővilága</span></h1>
                 <p class="wildlife-lead">Minden erdőszint külön világ: színes madarak, rejtőzködő állatok és különleges növények élnek egymás mellett. Ismerd meg az esőerdő lakóit!</p>
-                <nav class="wildlife-jump-links d-flex flex-wrap justify-content-center gap-3" aria-label="Ugrás az élővilág csoportjaihoz">
-                    <a class="button button-primary" href="#allatok">Állatok <span aria-hidden="true">↓</span></a>
-                    <a class="button button-secondary" href="#novenyek">Növények <span aria-hidden="true">↓</span></a>
-                </nav>
+                <div class="wildlife-jump-links wildlife-toggle d-flex flex-wrap justify-content-center gap-3" role="group" aria-label="Élővilág kategóriáinak kiválasztása">
+                    <button class="button button-primary wildlife-filter" type="button" data-wildlife-filter="animals" aria-controls="allatok" aria-pressed="true">Állatok <span class="wildlife-count" aria-hidden="true">06</span></button>
+                    <button class="button button-secondary wildlife-filter" type="button" data-wildlife-filter="plants" aria-controls="novenyek" aria-pressed="false">Növények <span class="wildlife-count" aria-hidden="true">06</span></button>
+                </div>
             </div>
         </section>
 
-        <section class="wildlife-group" id="allatok" aria-labelledby="animals-title">
+        <section class="wildlife-group" id="allatok" data-wildlife-panel="animals" aria-labelledby="animals-title">
             <div class="container-xl px-3 xl:px-4">
                 <div class="wildlife-group-heading d-flex flex-column md:flex-row md:align-items-end justify-content-between gap-3">
                     <div>
                         <p class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span>01 / ÁLLATVILÁG</p>
                         <h2 id="animals-title">Az esőerdők állatai</h2>
                     </div>
-                    <p>Három különleges lakó a lombok közül és az erdő mélyéről.</p>
+                    <p>Hat különleges lakó a lombok közül és az erdő mélyéről.</p>
                 </div>
                 <div class="row row-cols-1 md:row-cols-2 lg:row-cols-3 g-4 wildlife-grid">
                     <div class="col">
@@ -102,18 +102,51 @@
                             </div>
                         </article>
                     </div>
+                    <div class="col">
+                        <article class="feature-card wildlife-card h-100">
+                            <div class="card-art wildlife-card-image"><img src="img/rainforest-jaguar.webp" alt="Jaguár pihen egy mohával borított ágon az esőerdőben" width="1200" height="800" loading="lazy" decoding="async"><span class="art-tag wildlife-image-tag">ERDŐALJ</span></div>
+                            <div class="card-body d-flex flex-column wildlife-card-body">
+                                <p class="wildlife-card-meta">04 / EMLŐSÖK</p>
+                                <h3>Jaguár</h3>
+                                <p class="wildlife-latin">Panthera onca</p>
+                                <p class="wildlife-description">Az esőerdő csúcsragadozója kiváló úszó, ezért a folyók és mocsarak sem állják útját.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="feature-card wildlife-card h-100">
+                            <div class="card-art wildlife-card-image"><img src="img/rainforest-howler-monkey.webp" alt="Vörös bőgőmajom ül egy ágon az esőerdő lombkoronájában" width="1200" height="800" loading="lazy" decoding="async"><span class="art-tag wildlife-image-tag">LOMBKORONA</span></div>
+                            <div class="card-body d-flex flex-column wildlife-card-body">
+                                <p class="wildlife-card-meta">05 / EMLŐSÖK</p>
+                                <h3>Vörös bőgőmajom</h3>
+                                <p class="wildlife-latin">Alouatta seniculus</p>
+                                <p class="wildlife-description">Megnagyobbodott nyelvcsontja felerősíti a hangját, amely messzire elhallatszik a sűrű erdőben.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="feature-card wildlife-card h-100">
+                            <div class="card-art wildlife-card-image"><img src="img/rainforest-blue-morpho.webp" alt="Kék morphólepke széttárt, élénk kék szárnyakkal egy esőerdei levélen" width="1200" height="800" loading="lazy" decoding="async"><span class="art-tag wildlife-image-tag">ERDŐALJ</span></div>
+                            <div class="card-body d-flex flex-column wildlife-card-body">
+                                <p class="wildlife-card-meta">06 / ROVAROK</p>
+                                <h3>Kék morphólepke</h3>
+                                <p class="wildlife-latin">Morpho menelaus</p>
+                                <p class="wildlife-description">Szárnyainak ragyogó kék színét nem festék, hanem az apró pikkelyekről visszaverődő fény adja.</p>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="wildlife-group wildlife-plants" id="novenyek" aria-labelledby="plants-title">
+        <section class="wildlife-group wildlife-plants" id="novenyek" data-wildlife-panel="plants" aria-labelledby="plants-title" hidden>
             <div class="container-xl px-3 xl:px-4">
                 <div class="wildlife-group-heading d-flex flex-column md:flex-row md:align-items-end justify-content-between gap-3">
                     <div>
                         <p class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span>02 / NÖVÉNYVILÁG</p>
                         <h2 id="plants-title">A növények rejtett élete</h2>
                     </div>
-                    <p>Önálló kis élőhelyek, óriásfák és különleges túlélők.</p>
+                    <p>Hat különleges növény, amelyek sajátos módon alkalmazkodtak az esőerdő életéhez.</p>
                 </div>
                 <div class="row row-cols-1 md:row-cols-2 lg:row-cols-3 g-4 wildlife-grid">
                     <div class="col">
@@ -146,6 +179,39 @@
                                 <h3>Bromélia</h3>
                                 <p class="wildlife-latin">Bromeliaceae</p>
                                 <p class="wildlife-description">Levélrózsájában összegyűjti az esővizet, amely apró rovaroknak és más élőlényeknek is otthont ad.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="feature-card wildlife-card h-100">
+                            <div class="card-art wildlife-card-image"><img src="img/rainforest-orchid.webp" alt="Lila virágú trópusi orchidea nő egy esőerdei fa ágán" width="1200" height="800" loading="lazy" decoding="async"><span class="art-tag wildlife-image-tag">LOMBKORONA</span></div>
+                            <div class="card-body d-flex flex-column wildlife-card-body">
+                                <p class="wildlife-card-meta">04 / EPIFITÁK</p>
+                                <h3>Trópusi orchidea</h3>
+                                <p class="wildlife-latin">Cattleya</p>
+                                <p class="wildlife-description">Sok orchidea más növényre kapaszkodva jut fényhez, de a fától nem von el tápanyagot.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="feature-card wildlife-card h-100">
+                            <div class="card-art wildlife-card-image"><img src="img/rainforest-cacao.webp" alt="Sárga és narancssárga kakaótermések nőnek közvetlenül egy fa törzsén" width="1200" height="800" loading="lazy" decoding="async"><span class="art-tag wildlife-image-tag">ERDŐALJ</span></div>
+                            <div class="card-body d-flex flex-column wildlife-card-body">
+                                <p class="wildlife-card-meta">05 / HASZONNÖVÉNYEK</p>
+                                <h3>Kakaófa</h3>
+                                <p class="wildlife-latin">Theobroma cacao</p>
+                                <p class="wildlife-description">Különleges termései közvetlenül a törzsön fejlődnek; belsejük rejti a kakaóbabokat.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="feature-card wildlife-card h-100">
+                            <div class="card-art wildlife-card-image"><img src="img/rainforest-water-lily.webp" alt="Óriási kerek levelek és fehér virágok úsznak egy amazóniai lagúna vizén" width="1200" height="800" loading="lazy" decoding="async"><span class="art-tag wildlife-image-tag">VÍZFELSZÍN</span></div>
+                            <div class="card-body d-flex flex-column wildlife-card-body">
+                                <p class="wildlife-card-meta">06 / VÍZINÖVÉNYEK</p>
+                                <h3>Amazonasi óriás tündérrózsa</h3>
+                                <p class="wildlife-latin">Victoria amazonica</p>
+                                <p class="wildlife-description">Hatalmas, felhajtóerejű levelei a csendes amazóniai vizek felszínén úsznak.</p>
                             </div>
                         </article>
                     </div>

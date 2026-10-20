@@ -1,8 +1,8 @@
 (() => {
+    const filterButtons = [...document.querySelectorAll("[data-wildlife-filter]")];
+    const wildlifePanels = [...document.querySelectorAll("[data-wildlife-panel]")];
     const buttons = [...document.querySelectorAll(".sound-button[data-audio]")];
     const status = document.getElementById("audioStatus");
-
-    if (!buttons.length || !status) return;
 
     let activeAudio = null;
     let activeButton = null;
@@ -23,6 +23,30 @@
         activeAudio = null;
         activeButton = null;
     };
+
+    const setWildlifeCategory = (category) => {
+        if (category === "plants" && activeAudio) {
+            stopActiveAudio();
+            if (status) status.textContent = "A hang lejátszása leállt.";
+        }
+
+        filterButtons.forEach((button) => {
+            const isActive = button.dataset.wildlifeFilter === category;
+            button.setAttribute("aria-pressed", String(isActive));
+            button.classList.toggle("button-primary", isActive);
+            button.classList.toggle("button-secondary", !isActive);
+        });
+
+        wildlifePanels.forEach((panel) => {
+            panel.hidden = panel.dataset.wildlifePanel !== category;
+        });
+    };
+
+    filterButtons.forEach((button) => {
+        button.addEventListener("click", () => setWildlifeCategory(button.dataset.wildlifeFilter));
+    });
+
+    if (!buttons.length || !status) return;
 
     buttons.forEach((button) => {
         button.addEventListener("click", () => {

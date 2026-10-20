@@ -120,6 +120,10 @@ h1, h2, h3, p { margin-top: 0; }
 .wildlife-intro h1 span { color: var(--green); }
 .wildlife-lead { max-width: 690px; margin: 0 auto; color: var(--muted); font-size: clamp(1rem, 1.4vw, 1.12rem); line-height: 1.8; }
 .wildlife-jump-links { margin-top: 2rem; }
+.wildlife-filter { min-width: 155px; cursor: pointer; }
+.wildlife-filter:focus-visible { outline: 2px solid var(--green-bright); outline-offset: 3px; }
+.wildlife-count { font-size: .72rem; font-variant-numeric: tabular-nums; opacity: .75; }
+.wildlife-group[hidden] { display: none !important; }
 .button-secondary { border-color: rgb(189 148 111 / 52%); color: #e2c09c; background: rgb(189 148 111 / 8%); }
 .button-secondary:hover, .button-secondary:focus-visible { border-color: var(--brown); color: #f1d2ae; background: rgb(189 148 111 / 16%); }
 .wildlife-group { padding-block: clamp(3.5rem, 6vw, 5rem); }
