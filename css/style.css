@@ -23,7 +23,7 @@ h1, h2, h3 { font-family: var(--font-head); }
 h1, h2, h3, p { margin-top: 0; }
 .container-xl { width: calc(100% - 48px); max-width: 1160px; margin-inline: auto; }
 
-.site-header { z-index: 20; border-bottom: 1px solid rgb(255 255 255 / 7%); background: rgb(16 23 18 / 82%); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); }
+.site-header { z-index: 20; border-bottom: 1px solid rgb(255 255 255 / 7%); background: rgb(16 23 18 / 96%); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); }
 .site-nav { min-height: 76px; padding: 0; background: transparent; }
 .nav-wrap { width: calc(100% - 40px); max-width: 1280px; margin-inline: auto; gap: clamp(1rem, 2.5vw, 2.25rem); }
 .brand { flex: 0 0 auto; color: var(--text); font-family: var(--font-head); font-size: .82rem; font-weight: 800; letter-spacing: .12em; white-space: nowrap; }
