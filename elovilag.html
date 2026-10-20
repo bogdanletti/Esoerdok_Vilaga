@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="hu">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Ismerd meg az esőerdők különleges állatait és növényeit.">
+    <meta name="theme-color" content="#101712">
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+    <title>Az esőerdők élővilága | Esőerdők világa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-bs-theme="dark">
+    <header class="site-header sticky-top">
+        <nav class="navbar lg:navbar-expand site-nav" aria-label="Fő navigáció" data-bs-theme="dark">
+            <div class="container-fluid nav-wrap px-3 xl:px-5">
+                <a class="navbar-brand brand d-flex align-items-center gap-2" href="index.html" aria-label="Esőerdők világa – főoldal">
+                    <span class="brand-mark"><img src="img/feherLogo.webp" alt="" width="512" height="467"></span>
+                    <span class="brand-copy"><strong>ESŐERDŐK</strong><span>VILÁGA</span></span>
+                </a>
+                <button class="btn-icon navbar-toggler site-toggler" type="button" aria-controls="mainNavigation" aria-expanded="false" aria-label="Menü megnyitása">
+                    <span class="navbar-toggler-icon" aria-hidden="true"></span>
+                </button>
+                <dialog class="drawer drawer-end nav-drawer" tabindex="-1" id="mainNavigation" aria-labelledby="mainNavigationLabel">
+                    <div class="drawer-header">
+                        <h2 class="drawer-title" id="mainNavigationLabel">Menü</h2>
+                        <button type="button" class="btn-close drawer-close" aria-label="Menü bezárása"></button>
+                    </div>
+                    <div class="drawer-body">
+                        <ul class="navbar-nav lg:align-items-center lg:gap-1">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Főoldal</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="elovilag.html">Élővilág</a></li>
+                            <li class="nav-item"><a class="nav-link" href="tippek.html">Tippek</a></li>
+                            <li class="nav-item"><a class="nav-link" href="terkep.html">Térkép</a></li>
+                            <li class="nav-item"><a class="nav-link" href="kviz.html">Kvíz</a></li>
+                            <li class="nav-item"><a class="nav-link nav-cta" href="#bemutatkozas">Az esőerdőkről <span aria-hidden="true">↗</span></a></li>
+                        </ul>
+                    </div>
+                </dialog>
+            </div>
+        </nav>
+    </header>
+
+    <main class="wildlife-page">
+        <section class="wildlife-intro" id="bemutatkozas" aria-labelledby="wildlife-title">
+            <div class="container-xl px-3 xl:px-4">
+                <p class="eyebrow justify-content-center"><span class="pulse-dot" aria-hidden="true"></span>A lombkoronától az erdő talajáig</p>
+                <h1 id="wildlife-title">Az esőerdők <span>élővilága</span></h1>
+                <p class="wildlife-lead">Minden erdőszint külön világ: színes madarak, rejtőzködő állatok és különleges növények élnek egymás mellett. Ismerd meg az esőerdő lakóit!</p>
+                <nav class="wildlife-jump-links d-flex flex-wrap justify-content-center gap-3" aria-label="Ugrás az élővilág csoportjaihoz">
+                    <a class="button button-primary" href="#allatok">Állatok <span aria-hidden="true">↓</span></a>
+                    <a class="button button-secondary" href="#novenyek">Növények <span aria-hidden="true">↓</span></a>
+                </nav>
+            </div>
+        </section>
+
+        <section class="wildlife-group" id="allatok" aria-labelledby="animals-title">
+            <div class="container-xl px-3 xl:px-4">
+                <div class="wildlife-group-heading d-flex flex-column md:flex-row md:align-items-end justify-content-between gap-3">
+                    <div>
+                        <p class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span>01 / ÁLLATVILÁG</p>
+                        <h2 id="animals-title">Az esőerdők állatai</h2>
+                    </div>
+                    <p>Három különleges lakó a lombok közül és az erdő mélyéről.</p>
+                </div>
+                <div class="row row-cols-1 md:row-cols-2 lg:row-cols-3 g-4 wildlife-grid">
+                    <div class="col">
+                        <article class="feature-card wildlife-card h-100">
+                            <div class="card-art wildlife-card-image"><img src="img/rainforest-toucan.webp" alt="Színes tukán az esőerdő lombkoronájában" width="800" height="533" loading="lazy" decoding="async"><span class="art-tag wildlife-image-tag">LOMBKORONA</span></div>
+                            <div class="card-body d-flex flex-column wildlife-card-body">
+                                <p class="wildlife-card-meta">01 / MADARAK</p>
+                                <h3>Tukán</h3>
+                                <p class="wildlife-latin">Ramphastos toco</p>
+                                <p class="wildlife-description">Hatalmas, mégis könnyű csőrével gyümölcsöt szed. A csőr a testhőmérséklet szabályozásában is segíti.</p>
+                                <button class="speech-button" type="button" data-speech="Tukán. Ramphastos toco. Hatalmas, mégis könnyű csőrével gyümölcsöt szed. A csőr a testhőmérséklet szabályozásában is segíti." aria-label="A tukán ismertetőjének felolvasása"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"></path></svg><span>Hallgasd meg</span></button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="feature-card wildlife-card h-100">
+                            <div class="card-art wildlife-card-image"><img src="img/rainforest-frog.webp" alt="Vörös szemű levelibéka egy esőcseppektől fénylő levélen" width="800" height="533" loading="lazy" decoding="async"><span class="art-tag wildlife-image-tag">ERDŐALJ</span></div>
+                            <div class="card-body d-flex flex-column wildlife-card-body">
+                                <p class="wildlife-card-meta">02 / KÉTÉLTŰEK</p>
+                                <h3>Vörösszemű levelibéka</h3>
+                                <p class="wildlife-latin">Agalychnis callidryas</p>
+                                <p class="wildlife-description">Élénk színei és tapadókorongos ujjai segítik a levelek közötti rejtőzködésben és mászásban.</p>
+                                <button class="speech-button" type="button" data-speech="Vörösszemű levelibéka. Agalychnis callidryas. Élénk színei és tapadókorongos ujjai segítik a levelek közötti rejtőzködésben és mászásban." aria-label="A vörösszemű levelibéka ismertetőjének felolvasása"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"></path></svg><span>Hallgasd meg</span></button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="feature-card wildlife-card h-100">
+                            <div class="card-art wildlife-card-image"><img src="img/rainforest-sloth.webp" alt="Kétujjú lajhár pihen egy mohás esőerdei ágon" width="1200" height="800" loading="lazy" decoding="async"><span class="art-tag wildlife-image-tag">LOMBKORONA</span></div>
+                            <div class="card-body d-flex flex-column wildlife-card-body">
+                                <p class="wildlife-card-meta">03 / EMLŐSÖK</p>
+                                <h3>Kétujjú lajhár</h3>
+                                <p class="wildlife-latin">Choloepus didactylus</p>
+                                <p class="wildlife-description">Lassú mozgása takarékos életmódot takar. Ideje nagy részét a fák ágai között pihenve tölti.</p>
+                                <button class="speech-button" type="button" data-speech="Kétujjú lajhár. Choloepus didactylus. Lassú mozgása takarékos életmódot takar. Ideje nagy részét a fák ágai között pihenve tölti." aria-label="A kétujjú lajhár ismertetőjének felolvasása"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"></path></svg><span>Hallgasd meg</span></button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="wildlife-group wildlife-plants" id="novenyek" aria-labelledby="plants-title">
+            <div class="container-xl px-3 xl:px-4">
+                <div class="wildlife-group-heading d-flex flex-column md:flex-row md:align-items-end justify-content-between gap-3">
+                    <div>
+                        <p class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span>02 / NÖVÉNYVILÁG</p>
+                        <h2 id="plants-title">A növények rejtett élete</h2>
+                    </div>
+                    <p>Önálló kis élőhelyek, óriásfák és különleges túlélők.</p>
+                </div>
+                <div class="row row-cols-1 md:row-cols-2 lg:row-cols-3 g-4 wildlife-grid">
+                    <div class="col">
+                        <article class="feature-card wildlife-card h-100">
+                            <div class="card-art wildlife-card-image"><img src="img/rainforest-pitcher-plant.webp" alt="Különböző méretű kancsók egy trópusi kancsóka növényen" width="1200" height="800" loading="lazy" decoding="async"><span class="art-tag wildlife-image-tag">ERDŐALJ</span></div>
+                            <div class="card-body d-flex flex-column wildlife-card-body">
+                                <p class="wildlife-card-meta">01 / ROVAREVŐK</p>
+                                <h3>Kancsóka</h3>
+                                <p class="wildlife-latin">Nepenthes</p>
+                                <p class="wildlife-description">Leveleinek végén kancsó alakú csapdák fejlődnek. Az odatévedő rovarokból tápanyaghoz jut.</p>
+                                <button class="speech-button" type="button" data-speech="Kancsóka. Nepenthes. Leveleinek végén kancsó alakú csapdák fejlődnek. Az odatévedő rovarokból tápanyaghoz jut." aria-label="A kancsóka ismertetőjének felolvasása"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"></path></svg><span>Hallgasd meg</span></button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="feature-card wildlife-card h-100">
+                            <div class="card-art wildlife-card-image"><img src="img/rainforest-kapok-tree.webp" alt="Óriás kapokfa széles támasztógyökerekkel az esőerdőben" width="1200" height="800" loading="lazy" decoding="async"><span class="art-tag wildlife-image-tag">LOMBKORONA</span></div>
+                            <div class="card-body d-flex flex-column wildlife-card-body">
+                                <p class="wildlife-card-meta">02 / ÓRIÁSFÁK</p>
+                                <h3>Óriás kapokfa</h3>
+                                <p class="wildlife-latin">Ceiba pentandra</p>
+                                <p class="wildlife-description">Magasra emelkedő koronája és hatalmas támasztógyökerei sok más fajnak adnak élőhelyet.</p>
+                                <button class="speech-button" type="button" data-speech="Óriás kapokfa. Ceiba pentandra. Magasra emelkedő koronája és hatalmas támasztógyökerei sok más fajnak adnak élőhelyet." aria-label="Az óriás kapokfa ismertetőjének felolvasása"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"></path></svg><span>Hallgasd meg</span></button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="feature-card wildlife-card h-100">
+                            <div class="card-art wildlife-card-image"><img src="img/rainforest-bromeliad.webp" alt="Piros bromélia gyűjti az esővizet az esőerdő lombkoronájában" width="1200" height="800" loading="lazy" decoding="async"><span class="art-tag wildlife-image-tag">LOMBKORONA</span></div>
+                            <div class="card-body d-flex flex-column wildlife-card-body">
+                                <p class="wildlife-card-meta">03 / EPIFITÁK</p>
+                                <h3>Bromélia</h3>
+                                <p class="wildlife-latin">Bromeliaceae</p>
+                                <p class="wildlife-description">Levélrózsájában összegyűjti az esővizet, amely apró rovaroknak és más élőlényeknek is otthont ad.</p>
+                                <button class="speech-button" type="button" data-speech="Bromélia. Bromeliaceae. Levélrózsájában összegyűjti az esővizet, amely apró rovaroknak és más élőlényeknek is otthont ad." aria-label="A bromélia ismertetőjének felolvasása"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"></path></svg><span>Hallgasd meg</span></button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <p class="visually-hidden" id="speechStatus" aria-live="polite"></p>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container-xl px-3 xl:px-4">
+            <div class="footer-top d-flex flex-wrap align-items-center gap-3 xl:gap-4">
+                <a class="brand footer-brand d-flex align-items-center gap-2" href="index.html" aria-label="Esőerdők világa – vissza a főoldalra">
+                    <span class="brand-mark"><img src="img/feherLogo.webp" alt="" width="512" height="467"></span>
+                    <span class="brand-copy"><strong>ESŐERDŐK</strong><span>VILÁGA</span></span>
+                </a>
+                <p class="footer-motto">Egy zöldebb szemlélet. Egy élhetőbb bolygó.</p>
+                <nav class="footer-links d-flex flex-wrap gap-3 xl:gap-4" aria-label="Lábléc navigáció">
+                    <a href="index.html">Főoldal</a><a href="elovilag.html" aria-current="page">Élővilág</a><a href="tippek.html">Tippek</a><a href="terkep.html">Térkép</a><a href="kviz.html">Kvíz</a>
+                </nav>
+            </div>
+            <div class="footer-bottom d-flex flex-column md:flex-row align-items-start md:align-items-center justify-content-between gap-3">
+                <span>© 2026 Esőerdők világa. Minden jog fenntartva.</span>
+                <span class="footer-authors">Készítette: Hencz Norbert és Bogdán Letti</span>
+                <span class="footer-note"><span class="pulse-dot" aria-hidden="true"></span>A természetért, közösen.</span>
+                <a href="#bemutatkozas">Vissza a tetejére ↑</a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js" defer></script>
+</body>
+</html>
