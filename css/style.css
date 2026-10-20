@@ -113,6 +113,34 @@ h1, h2, h3, p { margin-top: 0; }
 .card-link { display: inline-flex; align-items: center; gap: .7rem; color: var(--green-bright); font-size: .9rem; font-weight: 700; }
 .card-link:hover { color: #e2efd3; }
 
+.wildlife-page { background: var(--bg); }
+.wildlife-intro { padding-block: clamp(4.5rem, 8vw, 6.5rem) 3.5rem; text-align: center; background: radial-gradient(ellipse at 50% 0%, rgb(166 199 138 / 10%), transparent 62%); }
+.wildlife-intro .eyebrow { margin-bottom: 1rem; }
+.wildlife-intro h1 { margin-bottom: 1.1rem; color: #eeeade; font-size: clamp(2.6rem, 6vw, 4.7rem); font-weight: 800; letter-spacing: -.065em; line-height: 1.18; }
+.wildlife-intro h1 span { color: var(--green); }
+.wildlife-lead { max-width: 690px; margin: 0 auto; color: var(--muted); font-size: clamp(1rem, 1.4vw, 1.12rem); line-height: 1.8; }
+.wildlife-jump-links { margin-top: 2rem; }
+.button-secondary { border-color: rgb(189 148 111 / 52%); color: #e2c09c; background: rgb(189 148 111 / 8%); }
+.button-secondary:hover, .button-secondary:focus-visible { border-color: var(--brown); color: #f1d2ae; background: rgb(189 148 111 / 16%); }
+.wildlife-group { padding-block: clamp(3.5rem, 6vw, 5rem); }
+.wildlife-plants { border-top: 1px solid var(--line); background: linear-gradient(110deg, rgb(29 42 32 / 52%), rgb(21 31 24 / 40%)); }
+.wildlife-group-heading { margin-bottom: 1.8rem; }
+.wildlife-group-heading .eyebrow { margin-bottom: .55rem; }
+.wildlife-group-heading h2 { margin: 0; color: #e9e5d7; font-size: clamp(1.9rem, 3.5vw, 2.7rem); letter-spacing: -.05em; line-height: 1.25; }
+.wildlife-group-heading > p { max-width: 340px; margin: 0; color: var(--muted); }
+.wildlife-card { display: flex; flex-direction: column; }
+.wildlife-card .card-art { height: clamp(190px, 23vw, 260px); }
+.wildlife-card .card-body { min-height: 275px; padding: 1.35rem; }
+.wildlife-card .card-meta { margin-bottom: .75rem; color: var(--green); }
+.wildlife-card h3 { margin-bottom: .3rem; font-size: 1.35rem; }
+.wildlife-card .wildlife-latin { margin: 0 0 .8rem; color: var(--brown); font-size: .88rem; font-style: italic; }
+.wildlife-card .wildlife-description { margin-bottom: 1.25rem; }
+.speech-button { display: inline-flex; min-height: 42px; align-items: center; justify-content: center; gap: .55rem; align-self: flex-start; margin-top: auto; padding: .5rem .8rem; border: 1px solid rgb(166 199 138 / 35%); border-radius: 3px; color: var(--green-bright); background: rgb(166 199 138 / 7%); font: inherit; font-size: .82rem; font-weight: 600; transition: border-color .2s ease, background .2s ease, color .2s ease; }
+.speech-button:hover, .speech-button:focus-visible { border-color: var(--green); color: #e7f0dc; background: rgb(166 199 138 / 14%); }
+.speech-button:disabled { cursor: wait; opacity: .72; }
+.speech-button svg { width: 18px; height: 18px; flex: 0 0 auto; }
+.speech-button.is-speaking { border-color: var(--brown); color: #f1d2ae; background: rgb(189 148 111 / 12%); }
+
 .site-footer { padding-top: 2.6rem; background: #0c120e; }
 .footer-top { min-height: 85px; padding-bottom: 1.6rem; border-bottom: 1px solid var(--line); }
 .footer-motto { margin: 0; color: #849080; font-size: .88rem; }
@@ -148,6 +176,10 @@ h1, h2, h3, p { margin-top: 0; }
     .section-heading { margin-bottom: 1.7rem; }
     .card-art { height: 230px; }
     .feature-card .card-body { min-height: 190px; }
+    .wildlife-intro { padding-block: 4rem 3rem; }
+    .wildlife-group { padding-block: 3.5rem; }
+    .wildlife-group-heading > p { max-width: 100%; }
+    .wildlife-card .card-body { min-height: 250px; }
     .footer-top { align-items: flex-start; }
     .footer-motto { width: 100%; order: 2; }
     .footer-links { width: 100%; order: 3; margin-left: 0; }
