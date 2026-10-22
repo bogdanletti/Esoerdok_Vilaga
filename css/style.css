@@ -261,15 +261,21 @@ p {
 @media (min-width: 992px) {
     .site-nav .nav-drawer:not([open]) {
         display: contents;
+        visibility: visible;
     }
 
     .site-nav .nav-drawer:not([open]) .drawer-header {
         display: none;
     }
 
+    .site-nav .site-toggler {
+        display: none;
+    }
+
     .site-nav .drawer-body {
         margin-left: auto;
         padding: 0;
+        visibility: visible;
     }
 
     .site-nav .navbar-nav {
