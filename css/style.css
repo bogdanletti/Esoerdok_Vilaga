@@ -59,7 +59,7 @@ p {
 }
 
 .container-xl {
-    width: calc(100% - 48px);
+    width: calc(100% - 36px);
     max-width: 1160px;
     margin-inline: auto;
 }
@@ -79,7 +79,7 @@ p {
 }
 
 .nav-wrap {
-    width: calc(100% - 40px);
+    width: calc(100% - 32px);
     max-width: 1280px;
     margin-inline: auto;
     gap: clamp(1rem, 2.5vw, 2.25rem);
@@ -316,7 +316,6 @@ p {
 
 .hero-inner {
     position: relative;
-    width: 100%;
     padding-block: clamp(6rem, 11vw, 9rem);
 }
 
@@ -963,14 +962,6 @@ p {
 @media (max-width: 991.98px) {
     :root {
         --hero-header-offset: 71px;
-    }
-
-    .container-xl {
-        width: calc(100% - 36px);
-    }
-
-    .nav-wrap {
-        width: calc(100% - 32px);
     }
 
     .site-nav {
