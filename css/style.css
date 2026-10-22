@@ -178,6 +178,7 @@ p {
     border: 1px solid rgb(166 199 138 / 40%);
     border-radius: 3px;
     color: var(--green-bright);
+    transition: all 0.2s ease;
 }
 
 .site-nav .nav-link.nav-cta::after {
@@ -362,6 +363,9 @@ p {
     letter-spacing: -.075em;
     line-height: 1.08;
     text-shadow: 0 4px 28px rgb(0 0 0 / 65%);
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .hero-section h1 em {
@@ -396,7 +400,8 @@ p {
     transition: transform .2s ease, background .2s ease, color .2s ease;
 }
 
-.button:hover {
+.button:hover,
+.nav-cta:hover {
     transform: translateY(-2px);
 }
 
@@ -406,9 +411,17 @@ p {
 }
 
 .button-primary:hover,
-.button-primary:focus-visible {
+.button-primary:focus-visible,
+.nav-cta:hover {
     color: #142016;
     background: var(--green-bright);
+}
+
+.underlined-link:hover {
+    transition: all 0.2s ease;
+    transform: translateY(-2px);
+    color: #eeee;
+    border-color: #eeee;
 }
 
 .text-link {
