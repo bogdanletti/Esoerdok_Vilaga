@@ -212,6 +212,17 @@ p {
     backdrop-filter: blur(4px);
 }
 
+.nav-drawer.hiding {
+    transform: translateX(100%);
+    visibility: hidden;
+}
+
+.nav-drawer.hiding::backdrop {
+    background: transparent;
+    -webkit-backdrop-filter: blur(0);
+    backdrop-filter: blur(0);
+}
+
 .nav-drawer .drawer-header {
     display: flex;
     align-items: center;
