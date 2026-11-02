@@ -361,16 +361,6 @@ p {
     text-transform: uppercase;
 }
 
-.pulse-dot {
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    flex: 0 0 auto;
-    border-radius: 50%;
-    background: var(--green);
-    box-shadow: 0 0 12px rgb(166 199 138 / 60%);
-}
-
 .hero-section h1 {
     margin: 0 0 1.25rem;
     color: var(--text);
@@ -1023,7 +1013,7 @@ p {
     color: var(--brown);
 }
 
-.map-hero-copy > p:not(.eyebrow) {
+.map-hero-copy>p:not(.eyebrow) {
     max-width: 600px;
     margin-bottom: 1.45rem;
     color: #d0d6cc;
@@ -1053,7 +1043,7 @@ p {
     min-width: 82px;
 }
 
-.map-hero-stats div + div {
+.map-hero-stats div+div {
     padding-left: 1.2rem;
     border-left: 1px solid var(--line);
 }
@@ -1111,7 +1101,7 @@ p {
     line-height: 1.25;
 }
 
-.map-section-heading > div > p:last-child {
+.map-section-heading>div>p:last-child {
     max-width: 650px;
     margin-bottom: 0;
     color: var(--muted);
@@ -1220,8 +1210,8 @@ p {
     letter-spacing: .085em;
 }
 
-.map-panel-heading > div,
-.map-panel-footer > span:first-child {
+.map-panel-heading>div,
+.map-panel-footer>span:first-child {
     display: inline-flex;
     align-items: center;
     gap: .55rem;
@@ -1270,7 +1260,7 @@ p {
     font-size: .73rem;
 }
 
-.map-panel-footer > span:first-child {
+.map-panel-footer>span:first-child {
     color: #cad2c5;
 }
 
@@ -1341,7 +1331,7 @@ p {
     list-style: none;
 }
 
-.map-location-list li + li {
+.map-location-list li+li {
     border-top: 1px solid var(--line);
 }
 
@@ -1389,7 +1379,7 @@ p {
     white-space: nowrap;
 }
 
-.map-location-copy > span {
+.map-location-copy>span {
     overflow: hidden;
     color: #98a393;
     font-size: .7rem;
@@ -1713,7 +1703,7 @@ p {
         font-size: clamp(2.65rem, 10vw, 4rem);
     }
 
-    .map-hero-copy > p:not(.eyebrow) {
+    .map-hero-copy>p:not(.eyebrow) {
         max-width: 540px;
         font-size: .96rem;
     }
@@ -1723,7 +1713,7 @@ p {
         padding: .8rem .9rem;
     }
 
-    .map-hero-stats div + div {
+    .map-hero-stats div+div {
         padding-left: .7rem;
     }
 
@@ -1737,7 +1727,7 @@ p {
         gap: .7rem;
     }
 
-    .map-section-heading > div > p:last-child {
+    .map-section-heading>div>p:last-child {
         font-size: .9rem;
     }
 
@@ -1820,7 +1810,7 @@ p {
         min-width: 0;
     }
 
-    .map-hero-stats div + div {
+    .map-hero-stats div+div {
         padding-left: .5rem;
     }
 
@@ -1903,7 +1893,7 @@ p {
         font-size: .76rem;
     }
 
-    .map-location-copy > span {
+    .map-location-copy>span {
         font-size: .62rem;
     }
 
