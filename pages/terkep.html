@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Fedezd fel a világ trópusi esőerdőit egy interaktív térképen.">
+    <meta name="theme-color" content="#101712">
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+    <title>Esőerdők térképe | Esőerdők világa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body data-bs-theme="dark">
+    <header class="site-header sticky-top">
+        <nav class="navbar lg:navbar-expand site-nav" aria-label="Fő navigáció" data-bs-theme="dark">
+            <div class="container-fluid nav-wrap px-3 xl:px-5">
+                <a class="navbar-brand brand d-flex align-items-center gap-2" href="../index.html"
+                    aria-label="Esőerdők világa – főoldal">
+                    <span class="brand-mark"><img src="../img/feherLogo.webp" alt="" width="512" height="467"></span>
+                    <span class="brand-copy"><strong>ESŐERDŐK</strong><span>VILÁGA</span></span>
+                </a>
+                <button class="btn-icon navbar-toggler site-toggler" type="button" aria-controls="mainNavigation"
+                    aria-expanded="false" aria-label="Menü megnyitása">
+                    <span class="navbar-toggler-icon" aria-hidden="true"></span>
+                </button>
+                <dialog class="drawer drawer-end nav-drawer" tabindex="-1" id="mainNavigation"
+                    aria-labelledby="mainNavigationLabel">
+                    <div class="drawer-header">
+                        <h2 class="drawer-title" id="mainNavigationLabel">Menü</h2>
+                        <button type="button" class="btn-close drawer-close" aria-label="Menü bezárása"></button>
+                    </div>
+                    <div class="drawer-body">
+                        <ul class="navbar-nav lg:align-items-center lg:gap-1">
+                            <li class="nav-item"><a class="nav-link" href="../index.html">Főoldal</a></li>
+                            <li class="nav-item"><a class="nav-link" href="elovilag.html">Élővilág</a></li>
+                            <li class="nav-item"><a class="nav-link" href="tippek.html">Tippek</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page"
+                                    href="terkep.html">Térkép</a></li>
+                            <li class="nav-item"><a class="nav-link" href="kviz.html">Kvíz</a></li>
+                            <li class="nav-item"><a class="nav-link nav-cta" href="../index.html#bemutatkozas">Az
+                                    esőerdőkről <span aria-hidden="true">↗</span></a></li>
+                        </ul>
+                    </div>
+                </dialog>
+            </div>
+        </nav>
+    </header>
+
+    <main class="map-page">
+        <section class="map-hero" aria-labelledby="map-title">
+            <img class="map-hero-image" src="../img/rainforest-river.webp"
+                alt="Folyó kanyarog a sűrű esőerdő fái között" width="800" height="533" fetchpriority="high">
+            <div class="container-xl map-hero-inner px-3">
+                <div class="map-hero-copy">
+                    <p class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span>FÖLDÜNK ZÖLD FOLYOSÓI</p>
+                    <h1 id="map-title">Esőerdők a <span>térképen</span></h1>
+                    <p>Járd be a trópusi erdők távoli vidékeit! Válassz egy régiót, és nézd meg, hol találkozik a sűrű
+                        lombkorona folyókkal, hegyekkel és partvidékekkel.</p>
+                    <a class="button button-primary" href="#terkep-felfedezese">Felfedezés a térképen <span
+                            aria-hidden="true">↓</span></a>
+                </div>
+                <div class="map-hero-stats" aria-label="A térkép tartalma">
+                    <div><strong>07</strong><span>megjelölt helyszín</span></div>
+                    <div><strong>04</strong><span>földrajzi térség</span></div>
+                    <div><strong>01</strong><span>interaktív térkép</span></div>
+                </div>
+            </div>
+            <span class="map-hero-caption">Folyók és lombkoronák / trópusi övezet</span>
+        </section>
+
+        <section class="map-explorer" id="terkep-felfedezese" aria-labelledby="map-explorer-title">
+            <div class="container-xl px-3 xl:px-4">
+                <div class="map-section-heading">
+                    <div>
+                        <p class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span>01 / VÁLASSZ RÉGIÓT</p>
+                        <h2 id="map-explorer-title">A trópusi erdők nyomában</h2>
+                        <p>Szűrj térség szerint, vagy válassz egy helyszínt a listából a térkép megnyitásához.</p>
+                    </div>
+                    <p class="map-region-total"><span aria-hidden="true">✳</span> 7 felfedezésre váró hely</p>
+                </div>
+
+                <div class="map-filter-row" role="group" aria-label="Esőerdő-helyszínek szűrése térség szerint">
+                    <button class="map-filter is-active" type="button" data-map-filter="all" aria-pressed="true">
+                        Minden térség <span>07</span>
+                    </button>
+                    <button class="map-filter" type="button" data-map-filter="latin-amerika" aria-pressed="false">
+                        Latin-Amerika <span>03</span>
+                    </button>
+                    <button class="map-filter" type="button" data-map-filter="afrika" aria-pressed="false">
+                        Afrika <span>01</span>
+                    </button>
+                    <button class="map-filter" type="button" data-map-filter="delkelet-azsia" aria-pressed="false">
+                        Délkelet-Ázsia <span>01</span>
+                    </button>
+                    <button class="map-filter" type="button" data-map-filter="oceania" aria-pressed="false">
+                        Óceánia <span>02</span>
+                    </button>
+                </div>
+
+                <div class="map-explorer-grid">
+                    <div class="map-panel">
+                        <div class="map-panel-heading">
+                            <div>
+                                <span class="map-live-indicator" aria-hidden="true"></span>
+                                <span>INTERAKTÍV VILÁGTÉRKÉP</span>
+                            </div>
+                            <span class="map-panel-hint">Nagyítás: görgővel vagy a + / − gombokkal</span>
+                        </div>
+                        <div id="rainforestMap" class="map-canvas" role="application"
+                            aria-label="Interaktív térkép az esőerdők helyszíneivel">
+                            <p class="map-loading">A térkép betöltése folyamatban…</p>
+                        </div>
+                        <div class="map-panel-footer">
+                            <span><span class="map-legend-dot" aria-hidden="true"></span>Megjelölt esőerdei térség</span>
+                            <span>Az alaptérkép internetkapcsolatot igényel · <a
+                                    href="https://www.openstreetmap.org/fixthemap" target="_blank"
+                                    rel="noopener noreferrer">Térképhiba jelzése</a></span>
+                        </div>
+                    </div>
+
+                    <aside class="map-location-panel" aria-labelledby="map-locations-title">
+                        <div class="map-list-heading">
+                            <div>
+                                <p class="map-list-kicker">HELYSZÍNEK</p>
+                                <h3 id="map-locations-title">Válassz úti célt</h3>
+                            </div>
+                            <span class="map-list-count" id="mapLocationCount">07</span>
+                        </div>
+                        <p class="map-list-description">Minden jelölő egy-egy jellegzetes erdővidékhez vezet.</p>
+                        <ul class="map-location-list" id="mapLocationList" aria-label="Esőerdei helyszínek">
+                            <li>
+                                <button class="map-location-card" type="button" data-map-location="amazonas"
+                                    data-map-region="latin-amerika" aria-label="Amazonas-medence megtekintése a térképen">
+                                    <span class="map-location-number">01</span>
+                                    <span class="map-location-copy"><strong>Amazonas-medence</strong><span>Peru · Latin-Amerika</span></span>
+                                    <span class="map-location-arrow" aria-hidden="true">↗</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="map-location-card" type="button" data-map-location="darien"
+                                    data-map-region="latin-amerika" aria-label="Darién vidékének megtekintése a térképen">
+                                    <span class="map-location-number">02</span>
+                                    <span class="map-location-copy"><strong>Darién vidéke</strong><span>Panama · Latin-Amerika</span></span>
+                                    <span class="map-location-arrow" aria-hidden="true">↗</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="map-location-card" type="button" data-map-location="talamanca"
+                                    data-map-region="latin-amerika" aria-label="Talamanca megtekintése a térképen">
+                                    <span class="map-location-number">03</span>
+                                    <span class="map-location-copy"><strong>Talamanca-hegység</strong><span>Costa Rica · Latin-Amerika</span></span>
+                                    <span class="map-location-arrow" aria-hidden="true">↗</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="map-location-card" type="button" data-map-location="kongo"
+                                    data-map-region="afrika" aria-label="Kongói-medence megtekintése a térképen">
+                                    <span class="map-location-number">04</span>
+                                    <span class="map-location-copy"><strong>Kongói-medence</strong><span>Közép-Afrika</span></span>
+                                    <span class="map-location-arrow" aria-hidden="true">↗</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="map-location-card" type="button" data-map-location="borneo"
+                                    data-map-region="delkelet-azsia" aria-label="Borneó megtekintése a térképen">
+                                    <span class="map-location-number">05</span>
+                                    <span class="map-location-copy"><strong>Borneó erdői</strong><span>Indonézia · Délkelet-Ázsia</span></span>
+                                    <span class="map-location-arrow" aria-hidden="true">↗</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="map-location-card" type="button" data-map-location="uj-guinea"
+                                    data-map-region="oceania" aria-label="Új-Guinea megtekintése a térképen">
+                                    <span class="map-location-number">06</span>
+                                    <span class="map-location-copy"><strong>Új-Guinea erdői</strong><span>Pápua Új-Guinea · Óceánia</span></span>
+                                    <span class="map-location-arrow" aria-hidden="true">↗</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="map-location-card" type="button" data-map-location="daintree"
+                                    data-map-region="oceania" aria-label="Daintree megtekintése a térképen">
+                                    <span class="map-location-number">07</span>
+                                    <span class="map-location-copy"><strong>Daintree esőerdeje</strong><span>Queensland · Óceánia</span></span>
+                                    <span class="map-location-arrow" aria-hidden="true">↗</span>
+                                </button>
+                            </li>
+                        </ul>
+                        <p class="visually-hidden" id="mapStatus" aria-live="polite"></p>
+                    </aside>
+                </div>
+
+                <div class="map-note">
+                    <span class="map-note-mark" aria-hidden="true">i</span>
+                    <p>A jelölők tájékoztató jelleggel mutatnak be néhány ismert esőerdei térséget. A térképen a nagyítással
+                        fedezheted fel a környező tájakat.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container-xl px-3 xl:px-4">
+            <div class="footer-top d-flex flex-wrap align-items-center gap-3 xl:gap-4">
+                <a class="brand footer-brand d-flex align-items-center gap-2" href="../index.html"
+                    aria-label="Esőerdők világa – vissza a főoldalra">
+                    <span class="brand-mark"><img src="../img/feherLogo.webp" alt="" width="512" height="467"></span>
+                    <span class="brand-copy"><strong>ESŐERDŐK</strong><span>VILÁGA</span></span>
+                </a>
+                <p class="footer-motto">Egy zöldebb szemlélet. Egy élhetőbb bolygó.</p>
+                <nav class="footer-links d-flex flex-wrap gap-3 xl:gap-4" aria-label="Lábléc navigáció">
+                    <a href="../index.html">Főoldal</a><a href="elovilag.html">Élővilág</a><a href="tippek.html">Tippek</a>
+                    <a href="terkep.html" aria-current="page">Térkép</a><a href="kviz.html">Kvíz</a>
+                </nav>
+            </div>
+            <div
+                class="footer-bottom d-flex flex-column md:flex-row align-items-start md:align-items-center justify-content-between gap-3">
+                <span>© 2026 Esőerdők világa. Minden jog fenntartva.</span>
+                <span class="footer-authors">Készítette: Hencz Norbert és Bogdán Letti</span>
+                <span class="footer-note"><span class="pulse-dot" aria-hidden="true"></span>A természetért,
+                    közösen.</span>
+                <a href="#terkep-felfedezese">Vissza a térképhez ↑</a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+    <script src="../js/script.js" defer></script>
+    <script src="../js/terkep.js" defer></script>
+</body>
+
+</html>
