@@ -94,7 +94,7 @@
         zoom: 2,
         minZoom: 2,
         maxZoom: 12,
-        scrollWheelZoom: false,
+        scrollWheelZoom: true,
         worldCopyJump: true,
         zoomControl: true
     });
