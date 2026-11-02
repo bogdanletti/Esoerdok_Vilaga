@@ -1217,8 +1217,7 @@ p {
     gap: .55rem;
 }
 
-.map-live-indicator,
-.map-legend-dot {
+.map-live-indicator {
     display: inline-block;
     width: 8px;
     height: 8px;
@@ -1264,7 +1263,7 @@ p {
     color: #cad2c5;
 }
 
-.map-panel-footer .map-legend-dot {
+.map-panel-footer {
     width: 7px;
     height: 7px;
 }
