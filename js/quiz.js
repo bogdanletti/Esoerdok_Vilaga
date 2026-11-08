@@ -52,5 +52,13 @@ function checkAnswer(index) {
     }
 }
 
+function showResult() {
+    document.getElementById("quiz").classList.add("d-none");
+    document.getElementById("result").classList.remove("d-none");
+
+    document.getElementById("score").textContent =
+        score + " / " + questions.length + " pont";
+}
+
 
 showQuestion();
