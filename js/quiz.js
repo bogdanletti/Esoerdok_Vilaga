@@ -60,5 +60,16 @@ function showResult() {
         score + " / " + questions.length + " pont";
 }
 
+function restart() {
+    current = 0;
+    score = 0;
+
+    document.getElementById("quiz").classList.remove("d-none");
+    document.getElementById("result").classList.add("d-none");
+
+    showQuestion();
+}
+
+document.getElementById("restart-btn").onclick = restart;
 
 showQuestion();
