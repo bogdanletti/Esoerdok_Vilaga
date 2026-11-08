@@ -54,8 +54,20 @@
     </header>
 
     <main class="kviz-page">
-        
+        <div class="quiz-container mx-auto p-4">
+            <div id="quiz">
+                <h1 class="text-center mb-4">Esőerdők kvíz</h1>
+                <p id="progress-text" class="text-end"></p>
 
+                <div class="progress mb-4">
+                    <div id="progress-bar" class="progress-bar"></div>
+                </div>
+
+                 <h2 id="question" class="mb-4"></h2>
+
+                 <div id="answers" class="d-grid gap-3"></div>
+            </div>
+        </div>
     </main>
 
     <footer class="site-footer">
@@ -83,7 +95,7 @@
         </div>
     </footer>
 
-    <script src="../js/quiz.js"></script>
+    <script type="module" src="../js/quiz.js"></script>
 </body>
 
 </html>
