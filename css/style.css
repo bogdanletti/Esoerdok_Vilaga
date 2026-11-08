@@ -1543,7 +1543,70 @@ p {
     line-height: 1.5;
 }
 
+.kviz {
+    min-height: 65vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 0;
+}
 
+.kviz #question {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 60px;
+}
+
+.answers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.answer-btn {
+    padding: 22px;
+    border: none;
+    border-radius: 6px;
+    background-color: #424242;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.answer-btn:hover {
+    background-color: #2e7651;
+}
+
+#progress-text {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 12px;
+}
+
+.kviz .progress {
+    max-width: 900px;
+    height: 8px;
+    margin: 0 auto;
+    background-color: #293a31;
+}
+
+.kviz .progress-bar {
+    background-color: #50b878;
+    transition: width 0.3s ease;
+}
+
+@media (max-width: 576px) {
+    .answers-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .kviz #question {
+        font-size: 24px;
+        margin-bottom: 35px;
+    }
+}
 
 @media (max-width: 991.98px) {
     :root {
