@@ -1601,7 +1601,9 @@ p {
     transition: width 0.3s ease;
 }
 
-
+.tips-intro{
+    padding-bottom: 200px;
+}
 
 @media (max-width: 576px) {
     .answers-grid {
