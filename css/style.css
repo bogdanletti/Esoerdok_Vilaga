@@ -1543,6 +1543,8 @@ p {
     line-height: 1.5;
 }
 
+
+
 @media (max-width: 991.98px) {
     :root {
         --hero-header-offset: 71px;
