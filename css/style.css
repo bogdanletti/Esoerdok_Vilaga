@@ -1596,6 +1596,16 @@ p {
     background-color: #293a31;
 }
 
+.restart-btn {
+    margin-top: 30px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2e7651;
+    color: white;
+    cursor: pointer;
+}
+
 .kviz .progress-bar {
     background-color: #50b878;
     transition: width 0.3s ease;
