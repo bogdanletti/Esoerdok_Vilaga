@@ -1681,7 +1681,7 @@ p {
 @media (max-width: 768px) {
     .tips-accordion .accordion-header {
         font-size: 16px;
-        padding: 20px 0;
+        padding: 25px 25px;
     }
 }
 
