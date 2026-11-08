@@ -38,5 +38,19 @@ function showQuestion() {
     }
 }
 
+function checkAnswer(index) {
+    if (questions[current].isCorrect(index)) {
+        score++;
+    }
+
+    current++;
+
+    if (current < questions.length) {
+        showQuestion();
+    } else {
+        showResult();
+    }
+}
+
 
 showQuestion();
