@@ -1253,7 +1253,7 @@ p {
 }
 
 .map-panel-footer {
-    min-height: 43px;
+    min-height: fit-content;
     border-top: 1px solid var(--line);
     color: #a5b09f;
     font-size: .73rem;
@@ -1272,6 +1272,10 @@ p {
     color: var(--green-bright);
     text-decoration: underline;
     text-underline-offset: 2px;
+}
+
+.map-panel-footer span{
+    padding: 10px 0px 10px 0px;
 }
 
 .map-location-panel {
@@ -1543,6 +1547,7 @@ p {
     line-height: 1.5;
 }
 
+
 .kviz {
     min-height: 65vh;
     display: flex;
@@ -1595,6 +1600,8 @@ p {
     background-color: #50b878;
     transition: width 0.3s ease;
 }
+
+
 
 @media (max-width: 576px) {
     .answers-grid {
